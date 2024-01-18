@@ -1,0 +1,245 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/elementsclasses";
+
+
+//4. Nested site structures
+
+/*Navigation bar*/
+
+nav {
+    width: 100%;
+    padding: 0.625rem;
+    border-bottom: $grey-sky 1px solid;
+    background-color: fade-out($white, 0.1);
+    position: fixed;
+    @include flex($r-sb-c...);
+    text-shadow: 0.125rem 0.125rem 0.5rem $grey;
+    z-index: 1;
+    > * {
+        flex: 1 1 30%;
+    }
+
+    .logo {
+        @include flex($d-fs-c...);
+        a{
+            #logo {
+                width: 12.5rem;
+                height: 3.125rem;
+                background-image: url(../images/logo1.png);
+                background-size: cover;
+                transition: 0.4s all linear 0.2s;
+                &:hover {
+                    background-image: url(../images/logo2.png);
+                    transition: 0.4s all linear 0.2s;
+                }
+            }
+        }
+    }
+
+    .links,
+    .icons {
+        ul {
+            width: 100%;
+            @include flex-f($rn-c...);
+            li {
+                transition: 0.4s all linear 0.2s;
+                &:hover {
+                    text-shadow: 0.125rem 0.125rem 0.5rem $durty-orange;
+                    transition: 0.4s all linear 0.2s;
+                }
+            }
+        }
+    }
+
+    .links {
+        @include flex($r-c-c...);
+        ul {
+            justify-content: center;
+            li {
+                margin: 0 0.75rem;                
+                a {
+                    font-family: $kanit;
+                    font-weight: 500;
+                    font-size: 1.25rem;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .icons {
+        @include flex($r-fe-c...);
+        ul {
+            justify-content: flex-end;
+            li {
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+
+/*Header*/
+
+.banner {
+    width: 100%;
+    img {
+        height: auto;
+    }
+}
+
+/*Main section*/
+
+#mission {
+    .image-container {
+        height: 48rem;
+        .content {
+            justify-content: center;
+            align-items: center;
+            #mission-statement {
+                height: 24rem;
+                width: 75%;
+                flex-grow: 0;
+                flex-shrink: 1;
+                background-image: $rainbow;
+                color: $white;
+                padding: 1rem 10%;
+                text-align: center;
+                line-height: 1.2;
+                font-family: $enriqueta;
+                @include flex-j($cn-sa...);
+                h3 {
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-family: $kanit;
+                    span {
+                        font-family: $jfs;
+                        text-shadow: 0.125rem 0.125rem 0.5rem $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#offer {
+    .content {
+        width: 100%;
+        height: auto;
+        padding: 3rem 1.5rem;
+        background-color: $cloudy-sky;
+        background-image: $lattice;
+        background-attachment: fixed;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: space-between;
+        .product {
+            display: flex;
+            flex-direction: column;
+            background-image: $rainbow;
+            opacity: 1;
+            padding: 1.5rem;
+            margin: 1rem;
+            .pic {
+                width: 18.75rem;
+            }
+
+            .label {
+                h4 {
+                    font-family: $enriqueta;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+#team {
+    margin-bottom: 0;
+    .image-container {
+        .content {
+            padding: 3rem 1.5rem;
+            justify-content: space-around;
+            align-items: center;
+            flex-flow: row wrap;
+            .team-member {
+                margin: 1rem;
+                @include flex(column, default, default);
+                width: 18.75rem;
+                .mugshot {
+                    @include flex(default, center, center);
+                    width: 100%;
+                    height: 28.125rem;
+                    background-image: $rainbow;  
+                    margin-bottom: 1rem;
+                    img {
+                        width: 97.33%;
+                        height: 97.33%;
+                    }
+                }
+
+                .label {
+                    h3 {
+                        font-family: $enriqueta;
+                        line-height: 2;
+                    }
+
+                    p {
+                        font-family: $kanit;
+                        line-height: 1.2;
+                        font-size: 1.5rem;
+                        text-transform: capitalize ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    background-color: $cloudy-sky;
+    background-image: $lattice;    
+    .background {
+        background-color: fade-out($whitesmoke, 0.9);
+        padding: 3rem 1.5rem;
+        h2 {
+            font-family: $jfs;
+            font-size: 3.5rem;
+            font-weight: bolder;
+            color: $black;
+            text-align: center;
+        }
+
+        p {
+            font-family: $kanit;
+            font-size: 1.25rem;
+            font-weight: 300;
+            letter-spacing: 0.125rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: $black;
+            text-shadow: 0.125rem 0.125rem 0.5rem $grey;  
+        }
+
+        h5 {
+            font-family: $kanit;
+            font-size: 0.625rem;
+            font-weight: 300;
+            letter-spacing: 0.125rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: $black;
+            text-shadow: 0.125rem 0.125rem 0.5rem $grey;
+            #unsplash {
+                text-decoration: underline;
+            }
+        }
+    }   
+}
+
+@import "helpers/mediaqueries";
