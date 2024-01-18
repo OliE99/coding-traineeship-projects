@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Space+Mono&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+        <title>Club Website</title>
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="resources/images/logo.png" alt="Logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="team.html">TEAM</a></li>
+                        <li><a href="score.html">SCORES</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+                <h1>WELCOME TO SEDGEFIELD CC</h1>
+                <p>We are a friendly, sociable and inclusive cricket club. <br> If you have any queries or would like to join, then please get in touch with us today by mailing sedgefieldcc@outlook.com</p>
+                <a href="contact.html" class="cnt-btn">GET IN TOUCH</a>
+            </div>
+        </section>
+
+        <!--About-->
+            <section class="about">
+                <h1>SEDGEFIELD CC</h1>
+                <p>We have a very active junior section from under 9's through to under 19's. We have boys, girls and mixed teams playing competitive softball & hardball cricket. Sedgefield Cricket Club is an ECB 'Focus Club' and has successfully been awarded 'ECB Clubmark Accreditation' which is a Sport England Clubmark status to confirm that Sedgefield is a safe, effective and child-friendly club.</p>
+            </section>
+
+            <section class="sponsor">
+                <h1>SPONSORS</h1>
+            </section>
+            <div class="row">
+                <div class="sponsor-col">
+                    <h3>HEXA</h3>
+                    <img src="resources/images/sponsor1.png">
+                </div>
+                <div class="sponsor-col">
+                    <h3>HEX LAB</h3>
+                    <img src="resources/images/sponsor2.png">
+                </div>
+                <div class="sponsor-col">
+                    <h3>AVEN</h3>
+                    <img src="resources/images/sponsor 3.png">
+                </div>
+                <div class="sponsor-col">
+                    <h3>FORGE HOMES</h3>
+                    <img src="resources/images/sponsor 4.jpeg">
+                </div>
+            </div>
+
+        <!--Facilities-->
+
+        <section class="facilities">
+            <h1>OUR FACILITIES</h1>
+            <p>We've state of the art training facilities to make you the best player you can be!</p>
+
+            <div class="row">
+                <div class="fac-col">
+                    <img src="resources/images/clubhouse.jpeg">
+                    <div class="layer">
+                        <figcaption>PAVILION</figcaption>
+                    </div>
+                </div>
+                <div class="fac-col">
+                    <img src="resources/images/net.jpeg">
+                    <div class="layer">
+                        <figcaption>NETS</figcaption>
+                    </div>
+                </div>
+                <div class="fac-col">
+                    <img src="resources/images/gym.webp">
+                    <div class="layer">
+                        <figcaption>GYM</figcaption>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!----Coaches---->
+
+        <section class="coach">
+            <h1>Our Coaching Staff</h1>
+            <p>Get to know our coaches below:</p>
+
+            <div class="row">
+                <div class="coach-col">
+                    <img src="resources/images/coach 1.jpeg">
+                    <figcaption>Jamie Spires</figcaption>
+                    <p>U6-U10 Coach</p>
+                </div>
+                <div class="coach-col">
+                    <img src="resources/images/coach 2.jpeg">
+                    <figcaption>Sam Jones</figcaption>
+                    <p>U12-U16 Coach</p>
+                </div>
+                <div class="coach-col">
+                    <img src="resources/images/coach 3.jpeg">
+                    <figcaption>Nick James</figcaption>
+                    <p>U18-U21 Coach</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hall-fame">
+            <h1><i class="fa-solid fa-ranking-star"></i> Hall of Fame <i class="fa-solid fa-ranking-star"></i></h1>
+            <p>See the stats for our best players below:</p>
+
+            <div class="row">
+                <div class="fame-col">
+                    <img src="resources/images/player 2.jpeg">
+                    <div>
+                        <h3><i class="fa-solid fa-star"></i> Jim Sally</h3>
+                        <p>Best Wicket Taker</p>
+                    </div>
+                </div>
+                <div class="fame-col">
+                    <img src="resources/images/player 1.jpeg">
+                    <div>
+                        <h3> <i class="fa-solid fa-star"></i> Paul Crow</h3>
+                        <p>Best Batsman</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="cta">
+            <h1>Sign Up To Our Training Sheet Now</h1>
+            <a href="contact.html" class="cnt-btn">CONTACT US</a>
+        </section>
+
+        <footer>
+            <h4>CONTACT INFO:</h4>
+            <p>Email: sedgefieldcc1872@gmail.com <br> Mobile: 07912345690</p>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/2132e9201f.js" crossorigin="anonymous"></script>
+    </body>
+</html>
