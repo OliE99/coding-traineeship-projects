@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Space+Mono&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+        <title>Club Website</title>
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="resources/images/logo.png" alt="Logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="team.html">TEAM</a></li>
+                        <li><a href="score.html">SCORES</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Contact Us</h1>
+        </section>
+
+        <section class="local">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2308.3354689729017!2d-1.4630749232666573!3d54.65091897269629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e8f0eb2e0e983%3A0x3430893d286699ea!2sSedgefield%20Cricket%20Club!5e0!3m2!1sen!2suk!4v1697656521672!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="contact">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>THE CLUB HOUSE</h5>
+                            <p>Sedgefield, Durham, TS21 2BY, UK</p>    
+                        </span>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>07912345690</h5>
+                            <p>Monday to Saturday, 10AM to 6PM</p>    
+                        </span>
+                        <i class="fa fa-envelope-o"></i>
+                        <span>
+                            <h5>sedgefieldcc1849@gmail.com</h5>
+                            <p>Email us your query</p>    
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    <form action="form-handler.php" method="post">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="Email" name="email" placeholder="Enter your email" required>
+                        <input type="text" name="subject" placeholder="Enter your subject" required>
+                        <textarea rows="8" placeholder="Message" required></textarea>
+                        <button type="submit" name="message" class="cnt-btn red-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h4>CONTACT INFO:</h4>
+            <p>Email: sedgefieldcc1849@gmail.com <br> Mobile: 07912345690</p>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/2132e9201f.js" crossorigin="anonymous"></script>
+    </body>
+</html>
