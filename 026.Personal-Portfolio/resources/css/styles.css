@@ -23,7 +23,7 @@ body {
 }
 
 nav {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
     padding: 2rem 1rem;
     display: flex;
@@ -79,7 +79,7 @@ nav {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
     padding: 5rem 2rem;
 }
@@ -168,7 +168,7 @@ section .header{
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .skills .card {
@@ -226,14 +226,13 @@ section .header{
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    text-align: center;
+    gap: 2rem;
 }
 
 .project .card{
-    padding: 2rem 1rem;
     background-color: #27272a;
-    display: flex;
+    padding: 3rem 2rem;
+    display: inline-flex;
     flex-direction: column;
     border: 2px solid transparent;
     border-radius: 15px;
@@ -243,11 +242,6 @@ section .header{
 .project .card:hover{
     background-color: #323232;
     border-color: #fff;
-}
-
-.project .card .content{
-    flex: 1;
-    margin-bottom: 2rem;
 }
 
 .project .card h4{
@@ -260,28 +254,10 @@ section .header{
 .project .card p{
     color: #fff;
     margin-bottom: 0.75rem;
-    border-bottom: 2px dashed #fff;
-}
-
-.project .card p i{
-    color: #ccc;
-    font-size: 1.2rem;
-    margin-right: 0.3rem;
 }
 
 .project .card img {
     padding-bottom: 1rem;
-}
-
-.project .card button{
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #fff;
-}
-
-.project .card button:hover{
-    background-color: #1e40af;
-    border-color: #1e40af;
 }
 
 footer {
