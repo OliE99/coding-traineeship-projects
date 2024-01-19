@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <title>Personal Portfolio</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="home.html">
+                <img src="resources/images/my-logo.png">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="home.html">Home</a></li>
+            <li id="link1" class="link"><a href="project.html">Projects</a></li>
+            <li id="link2" class="link"><a href="about.html">About</a></li>
+            <li id="link3" class="link"><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn">Contact Me</button>
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h4>FULL STACK DEVELOPER</h4>
+            <h1>Hi, I'm <span>Oliver</span>, Web Developer</h1>
+            <p> 
+                Hi there, thanks for visiting me!<br>
+            </p>
+            <p> 
+                I'm Oliver, a junior full-stack web developer with a passion for crafting stunning and responsive websites and games. I specialise in using both front and back-end technologies to bring unique and engaging ideas to life.
+            </p>
+        </div>
+        <div class="image">
+            <img src="resources/images/header.png">
+        </div>
+    </header>
+
+    <section class="contact">
+        <h2 class="header">CONTACT FORM</h2>
+        <div class="row">
+            <div class="contact-col">
+                <form action="form-handler.php" method="post">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="Email" name="email" placeholder="Enter your email" required>
+                    <input type="text" name="subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" placeholder="Message" required></textarea>
+                    <button type="submit" name="message" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <div class="logo">
+                <img src="resources/images/my-logo.png">
+            </div>
+            <div class="socials">
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="ri-linkedin-line"></i></a>
+            </div>
+        </div>
+        <div class="column">
+            <h4>Company</h4>
+            <a href="#">Business</a>
+            <a href="#">Partnership</a>
+            <a href="#">Network</a>
+        </div>
+        <div class="column">
+            <h4>About Us</h4>
+            <a href="#">Blogs</a>
+            <a href="#">Socials</a>
+            <a href="#">GitHub</a>
+        </div>
+        <div class="column">
+            <h4>Contact</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Privicy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        Copyright © 2023 Oliver Elliott. All Rights Reserved.
+    </div>
+
+    <script src="https://kit.fontawesome.com/2132e9201f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
