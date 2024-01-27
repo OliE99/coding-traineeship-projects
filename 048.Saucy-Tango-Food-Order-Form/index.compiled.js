@@ -35337,9 +35337,9 @@
     
     var _react = _interopRequireDefault(require("react"));
     
-    var _FoodOrderForm = _interopRequireDefault(require("./FoodOrderForm"));
+    var _FoodOrderForm = _interopRequireDefault(require("./FoodOrderForm.js"));
     
-    var _FoodItem = _interopRequireDefault(require("./FoodItem"));
+    var _FoodItem = _interopRequireDefault(require("./FoodItem.js"));
     
     var _AppModule = _interopRequireDefault(require("./App.module.css"));
     
@@ -35479,7 +35479,7 @@
     
     var _client = _interopRequireDefault(require("react-dom/client"));
     
-    var _App = _interopRequireDefault(require("./App"));
+    var _App = _interopRequireDefault(require("./App.js"));
     
     var _jsxRuntime = require("react/jsx-runtime");
     

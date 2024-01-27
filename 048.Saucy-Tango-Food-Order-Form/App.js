@@ -1,6 +1,6 @@
 import React from 'react';
-import FoodOrderForm from './FoodOrderForm';
-import FoodItem from "./FoodItem";
+import FoodOrderForm from './FoodOrderForm.js';
+import FoodItem from "./FoodItem.js";
 import styles from "./App.module.css";
 import Header from './Header.js';
 
