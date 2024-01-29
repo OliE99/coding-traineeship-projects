@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { getPetDetails } from '../../api/petfinder';
 import Hero from '../../components/hero';
-
-// Import useParams
-// Import Navigate
+import { useParams, Navigate } from 'react-router-dom';
 
 const PetDetailsPage = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const id = '51322435'; // <--- Update me!
+  const { id } = useParams();
 
   useEffect(() => {
     async function getPetsData() {
@@ -32,7 +30,7 @@ const PetDetailsPage = () => {
         <h3>Loading...</h3>
       ) : error ? (
         <div>
-          {/* Redirect to /pet-details-not-found if there was an error! */}
+          <Navigate to="/pet-details-not-found"/>
         </div>
       ) : (
         <main>
