@@ -2,15 +2,15 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams, Navigate } from "react-router-dom";
 import ROUTES from "../../app/routes";
-import { selectTopics } from "./topicsSlice";
-import { selectQuizzes } from "../quizzes/quizzesSlice";
+import { selectAllQuizzes } from "../quizzes/quizzesSlice";
+import { selectAllTopics } from "./topicsSlice";
+
 
 export default function Topic() {
-  const topics = useSelector(selectTopics);  // replace with selector
-  const quizzes = useSelector(selectQuizzes); // replace with selector
+  const topics = useSelector(selectAllTopics);  
+  const quizzes = useSelector(selectAllQuizzes); 
   const { topicId } = useParams();
   const topic = topics[topicId];
-  const quizzesForTopic = topic.quizIds.map((quizId) => quizzes[quizId]);
 
   if(!topic) {
     return <Navigate to={ROUTES.topicsRoute()} replace/>
@@ -21,7 +21,7 @@ export default function Topic() {
   return (
     <section>
       <img src={topic.icon} alt="" className="topic-icon" />
-      <h1>Topic: {topic.name}</h1>
+      <h1>{topic.name}</h1>
       <ul className="quizzes-list">
         {quizzesForTopic.map((quiz) => (
           <li className="quiz" key={quiz.id}>
