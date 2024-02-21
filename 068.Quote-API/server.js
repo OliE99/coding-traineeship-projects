@@ -3,75 +3,77 @@ const express = require('express');
 const app = express();
 
 const { quotes } = require('./data');
-const { getRandomElement } = require('./utils');
+const { getRandomElement, generateIds, getIndexById} = require('./utils');
 
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
-// Get routes - get data from quotes array
+// Get routes - get data from quotes array 
 app.get('/api/quotes', (req, res) => {
     let quoteMatch;
     let quoteSearch = req.query.person;
-    if (quoteSearch == undefined) {
-        res.send({quotes: quotes})
+    if (quoteSearch == undefined) {  
+      res.send({quotes: quotes})
     } else {
-        quoteMatch = quotes.filter(quote => {
-            return quote.person == quoteSearch && quote;
-        });
-        if (quoteMatch) {
-            res.send({quotes: quoteMatch});
-        } else {
-            res.status(404).send('Author not found!');
-        }
+      quotesMatch = quotes.filter(quote => {
+        return quote.person == quoteSearch && quote;
+      });
+      if (quoteMatch) {
+        res.send({ quotes: quotesMatch });
+      } else {
+        res.status(404).send('Author not found!');
+      }
     }
 })
-
+  
 app.get('/api/quotes/random', (req, res) => {
     let randomQuote = getRandomElement(quotes);
     res.send({quote: randomQuote})
-});
-
+})
+  
 // Post route - add new quotes to the array
 app.post('/api/quotes', (req, res) => {
     let newQuotePerson = req.query.person;
     let newQuote = req.query.quote;
     if (newQuote && newQuotePerson) {
-        quotes.push(req.query);
-        generateIds(quotes);
-        getPersonInfo(quotes);
-        res.status(201).send({quote: quotes[quotes.length-1]});
+      quotes.push(req.query);
+      generateIds(quotes);
+      getPersonInfo(quotes);
+      res.status(201).send({quote: quotes[quotes.length-1]});
     } else {
-        res.status(400).send('Quote not found with the id provided!');
+      res.status(400).send('Quote not found with the id provided!');
     }
-});
-
-// Put route - updates data in the array (uses provided id)
-app.put('api/quotes/:id', (req, res) => {
+})
+  
+// Put route - update the data in the array (based on id provided)
+app.put('/api/quotes/:id', (req, res) => {
+    // first we check if there're not missing parameter in the request
     if (req.query.person && req.query.quote) {
-        const quoteIndex = getIndexById(req.params.id, quotes);
-        if (quoteIndex !== 1) {
-            quotes[quoteIndex] = req.query 
-            getPersonInfo(quotes);
-            res.send({quote: req.query});
-        } else {
-            res.status(404).send('No quote with the provided id found.')
-        }
+      const quoteIndex = getIndexById(req.params.id, quotes);
+      // check if there is a match using the id provided in the request
+      if (quoteIndex !== -1) {
+        quotes[quoteIndex] = req.query
+        getPersonInfo(quotes);
+        res.send({ quote: req.query });
+      } else {
+        res.status(404).send('Quote not found with the id provided!')
+      }
     } else {
-        res.status(400).send('There is a missing parameter in the request!');
+      res.status(400).send("There's a missing parameter in the request!")
     }
-});
-
+})
+  
 // Delete route - handle the delete requests 
-app.delete('/api/quotes/:id', (req, res) => {
+  app.delete('/api/quotes/:id', (req, res) => {
     const quoteIndex = getIndexById(req.params.id, quotes);
     if (quoteIndex !== -1) {
       quotes.splice(quoteIndex, 1);
       res.send({ quote: quotes[quoteIndex] });
     } else {
-      res.status(404).send('No quote found with the id provided!')
+      res.status(404).send('Quote not found with the id provided!')
     }
-  })
+})
   
 const getPersonInfo = (arr) => {
     // for each element it will make a Get request to the Wikipedia Api with a Title parameter as the value of quotes.person
@@ -97,10 +99,12 @@ const getPersonInfo = (arr) => {
           })  
       }
     })
-};  
-
+}
+  
 app.listen(PORT, () => {
-   console.log(`Server Quote API Listening on PORT ${PORT}.`);
-   generateIds(quotes);
-   getPersonInfo(quotes);
+    console.log(`listening on port ${PORT}`);
+    // asign an id for all the quotes aready in the array
+    generateIds(quotes);
+    // each time the server is started it will get the biographical blurbs for all the person
+    getPersonInfo(quotes);
 });

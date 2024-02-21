@@ -2,7 +2,8 @@ const submitButton = document.getElementById('submit-quote');
 const deletedQuoteContainer = document.getElementById('deleted-quote');
 
 submitButton.addEventListener('click', () => {
-  const quoteId = document.getElementById('quote-id').value;
+    const quote = document.getElementById('quote').value;
+    const person = document.getElementById('person').value;
 
   fetch(`/api/quotes/${quoteId}`, { method: 'DELETE' })
     .then(response => {
