@@ -13,7 +13,7 @@ submitButton.addEventListener('click', () => {
       console.log(quote)
       const deletedQuote = document.createElement('div');
       deletedQuote.innerHTML = `
-    <h3>'You deleted this Quote correctly!'</h3>
+    <h3>'Quote deleted!'</h3>
     <div class="quote-text">${quote.quote}</div>
     <div class="attribution">- ${quote.person}</div>
     <p>Go to the <a href="index.html">home page</a> to request and view all quotes.</p>
