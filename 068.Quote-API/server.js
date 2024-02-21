@@ -62,7 +62,45 @@ app.put('api/quotes/:id', (req, res) => {
     }
 });
 
+// Delete route - handle the delete requests 
+app.delete('/api/quotes/:id', (req, res) => {
+    const quoteIndex = getIndexById(req.params.id, quotes);
+    if (quoteIndex !== -1) {
+      quotes.splice(quoteIndex, 1);
+      res.send({ quote: quotes[quoteIndex] });
+    } else {
+      res.status(404).send('No quote found with the id provided!')
+    }
+  })
+  
+const getPersonInfo = (arr) => {
+    // for each element it will make a Get request to the Wikipedia Api with a Title parameter as the value of quotes.person
+    // this GET request will get us a Json with just a short description about the person we have searched. 
+    arr.forEach(quote => {
+      // we make the request just if the property description doesn't exist yet 
+      if (!quote.description) {
+        fetch(`https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${quote.person}`)
+          .then(response => {
+            return response.json()
+          })
+          .then(jsonResponse => {
+          // this part looks a bit ugly but it's the only way i found to get that description .
+          //(it's a bit nested and at some point the property name is a string which is different in each request)
+            let pageInfo = jsonResponse.query.pages;
+            Object.keys(pageInfo).forEach(item => {
+              quote.description = pageInfo[item].extract;
+            });
+          })
+          .catch(error => {
+            console.log(error)
+            quote.description = 'No Description Avilable'
+          })  
+      }
+    })
+};  
+
 app.listen(PORT, () => {
    console.log(`Server Quote API Listening on PORT ${PORT}.`);
    generateIds(quotes);
+   getPersonInfo(quotes);
 });
