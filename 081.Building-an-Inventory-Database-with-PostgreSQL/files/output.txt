@@ -1,0 +1,56 @@
+SET
+id|description|code|manufacturer_id
+0| 2-color LED| V1-131|8
+1| Passive Buzzer| V1-006|3
+2| 2-color LED| V1-011|8
+3| | V1-031|4
+4| Vibration switch| V1-002|7
+5| Photo resistor| V1-018|5
+6| Key switch| V1-004|3
+7| Tilt switch| V1-020|7
+8| Full-color LED SMD modules| V1-009|8
+9| | V1-005|6
+(10 rows)
+ALTER TABLE
+ALTER TABLE
+CREATE TABLE
+INSERT 0 2
+UPDATE 0
+ALTER TABLE
+INSERT 0 1
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+id|name
+1| Pip Industrial
+2| NNC Manufacturing
+3| BBEV Corporation
+4| Tineye Corporation
+5| Tracer Technolgies
+6| BN Metals Corp.
+7| Northern Manufacturing
+8| Western IL Manufacturing
+9| NAU Remote Sensing
+10| Audion Industrial
+(10 rows)
+INSERT 0 1
+UPDATE 11
+id|description|code|manufacturer_id
+17| | V1-003|11
+18| Infrared sensor receiver| V1-022|11
+26| Voltage monitor| V1-033|11
+35| Temperature and humidity sensor| V1-015|11
+41| MQ7 sensor| MQ7|11
+43| Temperature humidity sensor| DHT11|11
+46| Digital touch sensor module| KR-0212|11
+47| Vibration sensor module| KR-0991|11
+48| Sound sensor module| KR-2131|11
+52| Infrared sensor module| HC-SR501|11
+53| Two-way relay module| KR-002|11
+(11 rows)
