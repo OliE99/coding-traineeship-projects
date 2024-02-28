@@ -1,0 +1,159 @@
+SET
+rolname
+ccuser
+(1 row)
+rolname|rolsuper|rolinherit|rolcreaterole|rolcreatedb|rolcanlogin|rolreplication|rolconnlimit|rolpassword|rolvaliduntil|rolbypassrls|rolconfig|oid
+pg_signal_backend|f|t|f|f|f|f|-1|********||f||4200
+ccuser|t|t|t|t|t|t|-1|********||t||10
+pg_read_all_stats|f|t|f|f|f|f|-1|********||f||3375
+pg_monitor|f|t|f|f|f|f|-1|********||f||3373
+pg_read_all_settings|f|t|f|f|f|f|-1|********||f||3374
+pg_stat_scan_tables|f|t|f|f|f|f|-1|********||f||3377
+(6 rows)
+current_role
+ccuser
+(1 row)
+CREATE ROLE
+CREATE ROLE
+GRANT
+GRANT
+grantor|grantee|table_catalog|table_schema|table_name|privilege_type|is_grantable|with_hierarchy
+ccuser|publishers|ccuser|analytics|downloads|SELECT|NO|YES
+(1 row)
+SET
+dataset_id|owner|download_timestamp
+54574bc2-8815-4015-b55f-a159bb48ea6b|dataio|2020-02-24 08:39:00
+1e93a40e-9b25-4fe7-a47d-caea273c119d|abc_open_data|2020-02-12 01:59:00
+2566b4bb-0298-4a39-ba0b-d90e279e953b|codecademy|2020-02-28 19:07:00
+a8a6540f-7224-46af-8954-36f26d50da32|dataio|2020-02-07 20:00:00
+de2ac3a6-adc1-4ba5-8ee6-a7e72a024dda|codecademy|2020-02-07 14:01:00
+2473a450-322c-43dc-8532-d647da5c5f2b|xyz_industries|2020-02-24 08:36:00
+5f6baa32-723a-4823-ae05-7d3ff2b0db30|xyz_industries|2020-03-02 16:03:00
+2566b4bb-0298-4a39-ba0b-d90e279e953b|codecademy|2020-02-12 13:11:00
+2b8b616e-a684-4ba4-8ea4-119206794f2a|abc_open_data|2020-02-20 14:59:00
+9fc59433-d3f1-4878-89bc-21126da67a69|codecademy|2020-02-14 11:26:00
+(10 rows)
+SET
+id|create_date|hosting_path|publisher|src_size|data_checksum
+6d9e44cf-46da-423a-a43a-48d969b321c5|2020-01-03|s3://this-bucket-dne/dataio/6d9e44cf-46da-423a-a43a-48d969b321c5.csv|dataio|321 MB|3403326f1ebf488188da6a8f24e6f897
+b0f5bdb9-2653-44c3-8d6c-997e8758eedc|2020-01-30|s3://this-bucket-dne/dataio/b0f5bdb9-2653-44c3-8d6c-997e8758eedc.csv|dataio|49 MB|9609103b9e484081a70acdd308baf1eb
+c2b315f3-7406-42f4-951e-a4fc58b2e927|2020-01-02|s3://this-bucket-dne/dataio/c2b315f3-7406-42f4-951e-a4fc58b2e927.csv|dataio|480 MB|d3c82e7d3c92468b9d578b4f29d84041
+aba83a3c-2ee4-4ce7-bd44-d4fbf93180aa|2020-01-20|s3://this-bucket-dne/xyz_industries/aba83a3c-2ee4-4ce7-bd44-d4fbf93180aa.csv|xyz_industries|140 MB|4829d029a469476da2a3b19df7b29046
+6f370673-1de7-4623-a2b9-a3d944a745e3|2020-01-02|s3://this-bucket-dne/abc_open_data/6f370673-1de7-4623-a2b9-a3d944a745e3.csv|abc_open_data|152 MB|801ff254230843fb89dab5494640d311
+(5 rows)
+GRANT
+GRANT
+SET
+id|publisher|hosting_path
+6d9e44cf-46da-423a-a43a-48d969b321c5|dataio|s3://this-bucket-dne/dataio/6d9e44cf-46da-423a-a43a-48d969b321c5.csv
+b0f5bdb9-2653-44c3-8d6c-997e8758eedc|dataio|s3://this-bucket-dne/dataio/b0f5bdb9-2653-44c3-8d6c-997e8758eedc.csv
+c2b315f3-7406-42f4-951e-a4fc58b2e927|dataio|s3://this-bucket-dne/dataio/c2b315f3-7406-42f4-951e-a4fc58b2e927.csv
+aba83a3c-2ee4-4ce7-bd44-d4fbf93180aa|xyz_industries|s3://this-bucket-dne/xyz_industries/aba83a3c-2ee4-4ce7-bd44-d4fbf93180aa.csv
+6f370673-1de7-4623-a2b9-a3d944a745e3|abc_open_data|s3://this-bucket-dne/abc_open_data/6f370673-1de7-4623-a2b9-a3d944a745e3.csv
+f0336fac-99f9-47d0-a1f1-e5320273de75|codecademy|s3://this-bucket-dne/codecademy/f0336fac-99f9-47d0-a1f1-e5320273de75.csv
+a8f6118b-ff1e-4180-9b88-6f026ee43cbf|abc_open_data|s3://this-bucket-dne/abc_open_data/a8f6118b-ff1e-4180-9b88-6f026ee43cbf.csv
+b87b3f05-e2a0-4478-9134-07c5f56a53c2|xyz_industries|s3://this-bucket-dne/xyz_industries/b87b3f05-e2a0-4478-9134-07c5f56a53c2.csv
+56ce78c8-674d-4382-82d7-75b16b1591cb|dataio|s3://this-bucket-dne/dataio/56ce78c8-674d-4382-82d7-75b16b1591cb.csv
+58823a0e-fab4-4f77-a210-33707ca66284|xyz_industries|s3://this-bucket-dne/xyz_industries/58823a0e-fab4-4f77-a210-33707ca66284.csv
+2473a450-322c-43dc-8532-d647da5c5f2b|xyz_industries|s3://this-bucket-dne/xyz_industries/2473a450-322c-43dc-8532-d647da5c5f2b.csv
+0bd65fd0-94b7-429c-8ac3-5fabc2c25e71|abc_open_data|s3://this-bucket-dne/abc_open_data/0bd65fd0-94b7-429c-8ac3-5fabc2c25e71.csv
+558bc82b-b295-477a-855e-4ea93ae66c4d|codecademy|s3://this-bucket-dne/codecademy/558bc82b-b295-477a-855e-4ea93ae66c4d.csv
+9360f1d1-a03a-4e90-b7be-a7a52432aa88|xyz_industries|s3://this-bucket-dne/xyz_industries/9360f1d1-a03a-4e90-b7be-a7a52432aa88.csv
+5d921751-ed4b-4116-90b0-e1d5176b539c|codecademy|s3://this-bucket-dne/codecademy/5d921751-ed4b-4116-90b0-e1d5176b539c.csv
+109554c0-0516-46dc-9c2d-3fca8600a9d8|codecademy|s3://this-bucket-dne/codecademy/109554c0-0516-46dc-9c2d-3fca8600a9d8.csv
+007815b0-a6f8-41c6-8cac-712154450d17|xyz_industries|s3://this-bucket-dne/xyz_industries/007815b0-a6f8-41c6-8cac-712154450d17.csv
+6374320e-babe-4106-ba3c-8bedeb4d8055|xyz_industries|s3://this-bucket-dne/xyz_industries/6374320e-babe-4106-ba3c-8bedeb4d8055.csv
+a8a6540f-7224-46af-8954-36f26d50da32|dataio|s3://this-bucket-dne/dataio/a8a6540f-7224-46af-8954-36f26d50da32.csv
+dab7e183-5abb-4b8f-a057-d67e1f809b8b|codecademy|s3://this-bucket-dne/codecademy/dab7e183-5abb-4b8f-a057-d67e1f809b8b.csv
+2c3f4e87-443c-4913-8793-243e06413794|dataio|s3://this-bucket-dne/dataio/2c3f4e87-443c-4913-8793-243e06413794.csv
+de2ac3a6-adc1-4ba5-8ee6-a7e72a024dda|codecademy|s3://this-bucket-dne/codecademy/de2ac3a6-adc1-4ba5-8ee6-a7e72a024dda.csv
+a7be939e-7d2b-4c98-ab92-bcf69be9e603|xyz_industries|s3://this-bucket-dne/xyz_industries/a7be939e-7d2b-4c98-ab92-bcf69be9e603.csv
+6a5c9019-a0f6-4d80-9391-bff11bd8623f|codecademy|s3://this-bucket-dne/codecademy/6a5c9019-a0f6-4d80-9391-bff11bd8623f.csv
+a34ce1c1-793c-496b-898d-3fd8dc85d3f0|dataio|s3://this-bucket-dne/dataio/a34ce1c1-793c-496b-898d-3fd8dc85d3f0.csv
+9610598e-4cbe-40df-92ac-23a7e2c29d5b|abc_open_data|s3://this-bucket-dne/abc_open_data/9610598e-4cbe-40df-92ac-23a7e2c29d5b.csv
+bfcaa083-4f3e-46a1-aaf8-3be7345b3110|codecademy|s3://this-bucket-dne/codecademy/bfcaa083-4f3e-46a1-aaf8-3be7345b3110.csv
+f6b04080-bbc4-41c2-93f5-28c020317d26|codecademy|s3://this-bucket-dne/codecademy/f6b04080-bbc4-41c2-93f5-28c020317d26.csv
+1e93a40e-9b25-4fe7-a47d-caea273c119d|abc_open_data|s3://this-bucket-dne/abc_open_data/1e93a40e-9b25-4fe7-a47d-caea273c119d.csv
+5f6baa32-723a-4823-ae05-7d3ff2b0db30|xyz_industries|s3://this-bucket-dne/xyz_industries/5f6baa32-723a-4823-ae05-7d3ff2b0db30.csv
+486bf9c3-2f57-4bf3-9ec3-14a622bfef10|dataio|s3://this-bucket-dne/dataio/486bf9c3-2f57-4bf3-9ec3-14a622bfef10.csv
+64a20f2a-d6bb-4999-a6dc-5b0ae2433ec1|xyz_industries|s3://this-bucket-dne/xyz_industries/64a20f2a-d6bb-4999-a6dc-5b0ae2433ec1.csv
+77bfe7fc-96a6-4b4c-b90f-0ea4e89ee862|dataio|s3://this-bucket-dne/dataio/77bfe7fc-96a6-4b4c-b90f-0ea4e89ee862.csv
+3d1f7634-5ff3-4862-8246-98f400b8051d|dataio|s3://this-bucket-dne/dataio/3d1f7634-5ff3-4862-8246-98f400b8051d.csv
+ecee19fe-ce8b-4d6e-9cb7-bcb8361913a5|codecademy|s3://this-bucket-dne/codecademy/ecee19fe-ce8b-4d6e-9cb7-bcb8361913a5.csv
+21895a06-1ace-4c32-95b0-a8aca8e9ad88|codecademy|s3://this-bucket-dne/codecademy/21895a06-1ace-4c32-95b0-a8aca8e9ad88.csv
+3f99318f-e32b-4afe-ac5d-f633c955fb32|dataio|s3://this-bucket-dne/dataio/3f99318f-e32b-4afe-ac5d-f633c955fb32.csv
+f192be23-0b4d-41c7-8e2e-15116eca7f00|xyz_industries|s3://this-bucket-dne/xyz_industries/f192be23-0b4d-41c7-8e2e-15116eca7f00.csv
+976c3c0c-7959-497c-adc5-730770b0d497|codecademy|s3://this-bucket-dne/codecademy/976c3c0c-7959-497c-adc5-730770b0d497.csv
+acfc0ed8-be02-47bc-b5b4-561262bb210b|codecademy|s3://this-bucket-dne/codecademy/acfc0ed8-be02-47bc-b5b4-561262bb210b.csv
+d05087b3-ab9a-4910-b901-f9cc0d2e3f6c|codecademy|s3://this-bucket-dne/codecademy/d05087b3-ab9a-4910-b901-f9cc0d2e3f6c.csv
+9fc59433-d3f1-4878-89bc-21126da67a69|codecademy|s3://this-bucket-dne/codecademy/9fc59433-d3f1-4878-89bc-21126da67a69.csv
+16189f48-65db-4921-a8b8-76266c040ea4|xyz_industries|s3://this-bucket-dne/xyz_industries/16189f48-65db-4921-a8b8-76266c040ea4.csv
+ea0f0974-5637-4883-afc0-4bed49080234|dataio|s3://this-bucket-dne/dataio/ea0f0974-5637-4883-afc0-4bed49080234.csv
+0c6e725a-a298-406e-b005-33fe631266c3|dataio|s3://this-bucket-dne/dataio/0c6e725a-a298-406e-b005-33fe631266c3.csv
+5624764f-e3ee-414c-b790-1c130a1bffd6|xyz_industries|s3://this-bucket-dne/xyz_industries/5624764f-e3ee-414c-b790-1c130a1bffd6.csv
+43c6527f-fa10-4e88-8999-87816e207445|dataio|s3://this-bucket-dne/dataio/43c6527f-fa10-4e88-8999-87816e207445.csv
+00d5b65f-348c-4049-941e-c05849b6fc32|codecademy|s3://this-bucket-dne/codecademy/00d5b65f-348c-4049-941e-c05849b6fc32.csv
+22430419-c1f5-406b-8639-c85123862e42|dataio|s3://this-bucket-dne/dataio/22430419-c1f5-406b-8639-c85123862e42.csv
+03ec28be-c49c-4bb1-801e-d262c80a7401|codecademy|s3://this-bucket-dne/codecademy/03ec28be-c49c-4bb1-801e-d262c80a7401.csv
+97c4439b-1b18-4d38-b936-cb9f440d5237|abc_open_data|s3://this-bucket-dne/abc_open_data/97c4439b-1b18-4d38-b936-cb9f440d5237.csv
+a482900f-fafc-4ea1-9535-a3bdf1608acf|codecademy|s3://this-bucket-dne/codecademy/a482900f-fafc-4ea1-9535-a3bdf1608acf.csv
+5f9c582f-c1c3-4bc5-af86-942e26a371bd|dataio|s3://this-bucket-dne/dataio/5f9c582f-c1c3-4bc5-af86-942e26a371bd.csv
+9e9db1bc-8389-493d-b23e-639c191076f7|xyz_industries|s3://this-bucket-dne/xyz_industries/9e9db1bc-8389-493d-b23e-639c191076f7.csv
+7c7af28e-3356-450f-9564-2a8031f6af3b|xyz_industries|s3://this-bucket-dne/xyz_industries/7c7af28e-3356-450f-9564-2a8031f6af3b.csv
+1cf96c15-bf79-4d41-aa31-226dfe7d9967|codecademy|s3://this-bucket-dne/codecademy/1cf96c15-bf79-4d41-aa31-226dfe7d9967.csv
+22378692-5b98-42e2-a765-ddc22afa6188|xyz_industries|s3://this-bucket-dne/xyz_industries/22378692-5b98-42e2-a765-ddc22afa6188.csv
+5fc94a83-4255-4150-9e2b-2a9917c32dca|xyz_industries|s3://this-bucket-dne/xyz_industries/5fc94a83-4255-4150-9e2b-2a9917c32dca.csv
+08b47519-5e38-40eb-8494-b11b3fc2e5c1|abc_open_data|s3://this-bucket-dne/abc_open_data/08b47519-5e38-40eb-8494-b11b3fc2e5c1.csv
+76603aa3-cd1d-40b5-91d6-b0963298aaa0|codecademy|s3://this-bucket-dne/codecademy/76603aa3-cd1d-40b5-91d6-b0963298aaa0.csv
+97479a89-fdc1-4823-b7c2-1637b3748fd8|codecademy|s3://this-bucket-dne/codecademy/97479a89-fdc1-4823-b7c2-1637b3748fd8.csv
+ae9cfe3f-b1d9-48ac-b9e7-ea13e6644453|xyz_industries|s3://this-bucket-dne/xyz_industries/ae9cfe3f-b1d9-48ac-b9e7-ea13e6644453.csv
+e7cfaf36-11bf-423e-9c3c-ee8d7b3d6d1a|dataio|s3://this-bucket-dne/dataio/e7cfaf36-11bf-423e-9c3c-ee8d7b3d6d1a.csv
+40052b4e-707a-4fd2-97bd-a60901e54853|abc_open_data|s3://this-bucket-dne/abc_open_data/40052b4e-707a-4fd2-97bd-a60901e54853.csv
+a1afb169-65bf-4838-8d7c-570fbd175b5a|abc_open_data|s3://this-bucket-dne/abc_open_data/a1afb169-65bf-4838-8d7c-570fbd175b5a.csv
+5f96843f-0fd8-40e6-b554-8976e083650e|dataio|s3://this-bucket-dne/dataio/5f96843f-0fd8-40e6-b554-8976e083650e.csv
+b69f8f7c-f13b-4f70-b5e5-010bede037da|abc_open_data|s3://this-bucket-dne/abc_open_data/b69f8f7c-f13b-4f70-b5e5-010bede037da.csv
+fc8a6007-d15e-4d7e-9f1b-0baae20782a1|abc_open_data|s3://this-bucket-dne/abc_open_data/fc8a6007-d15e-4d7e-9f1b-0baae20782a1.csv
+f50f89e2-6e38-4a4c-a9a4-d1c6f84c5397|xyz_industries|s3://this-bucket-dne/xyz_industries/f50f89e2-6e38-4a4c-a9a4-d1c6f84c5397.csv
+2151a8e0-c1d7-4e1d-88f8-71893b5bda24|xyz_industries|s3://this-bucket-dne/xyz_industries/2151a8e0-c1d7-4e1d-88f8-71893b5bda24.csv
+2566b4bb-0298-4a39-ba0b-d90e279e953b|codecademy|s3://this-bucket-dne/codecademy/2566b4bb-0298-4a39-ba0b-d90e279e953b.csv
+0ac05906-1a69-4b2c-8803-d3b732998116|abc_open_data|s3://this-bucket-dne/abc_open_data/0ac05906-1a69-4b2c-8803-d3b732998116.csv
+697944fe-8f10-4967-b44a-6b434a905421|abc_open_data|s3://this-bucket-dne/abc_open_data/697944fe-8f10-4967-b44a-6b434a905421.csv
+18794121-fdbf-48e1-af79-eb4fdcdd6547|codecademy|s3://this-bucket-dne/codecademy/18794121-fdbf-48e1-af79-eb4fdcdd6547.csv
+a356acd4-bb67-4dd5-9501-fb3ebf0bb65e|xyz_industries|s3://this-bucket-dne/xyz_industries/a356acd4-bb67-4dd5-9501-fb3ebf0bb65e.csv
+aa1e7db8-7b94-4b87-a13e-ce4530bbaed1|abc_open_data|s3://this-bucket-dne/abc_open_data/aa1e7db8-7b94-4b87-a13e-ce4530bbaed1.csv
+35129320-fbbf-4729-b8f6-c3dead2cf671|codecademy|s3://this-bucket-dne/codecademy/35129320-fbbf-4729-b8f6-c3dead2cf671.csv
+2b8b616e-a684-4ba4-8ea4-119206794f2a|abc_open_data|s3://this-bucket-dne/abc_open_data/2b8b616e-a684-4ba4-8ea4-119206794f2a.csv
+c441e65a-b77f-4d93-8617-c7164791aa50|dataio|s3://this-bucket-dne/dataio/c441e65a-b77f-4d93-8617-c7164791aa50.csv
+345abdfb-fbe4-4163-a68d-88065403e2b4|dataio|s3://this-bucket-dne/dataio/345abdfb-fbe4-4163-a68d-88065403e2b4.csv
+bccfa7b0-84c4-4e63-9729-48decc85fdcd|abc_open_data|s3://this-bucket-dne/abc_open_data/bccfa7b0-84c4-4e63-9729-48decc85fdcd.csv
+2303d7bd-184c-42b6-ac3d-3de3762de42c|dataio|s3://this-bucket-dne/dataio/2303d7bd-184c-42b6-ac3d-3de3762de42c.csv
+be5e3571-a367-4eda-bf55-62627c819c8a|codecademy|s3://this-bucket-dne/codecademy/be5e3571-a367-4eda-bf55-62627c819c8a.csv
+dcf3011b-02fc-42c9-9421-5d0311b97032|abc_open_data|s3://this-bucket-dne/abc_open_data/dcf3011b-02fc-42c9-9421-5d0311b97032.csv
+4194f38a-101d-4010-bdde-5ce3d805c703|abc_open_data|s3://this-bucket-dne/abc_open_data/4194f38a-101d-4010-bdde-5ce3d805c703.csv
+d620991d-3714-435f-9380-5a0087795edc|xyz_industries|s3://this-bucket-dne/xyz_industries/d620991d-3714-435f-9380-5a0087795edc.csv
+00dd39f4-9784-4d84-bd4b-9f328f21aae9|xyz_industries|s3://this-bucket-dne/xyz_industries/00dd39f4-9784-4d84-bd4b-9f328f21aae9.csv
+30189103-465a-426e-a79f-93116793493e|codecademy|s3://this-bucket-dne/codecademy/30189103-465a-426e-a79f-93116793493e.csv
+fe79f872-e897-4dcb-87df-7b61088744e6|xyz_industries|s3://this-bucket-dne/xyz_industries/fe79f872-e897-4dcb-87df-7b61088744e6.csv
+20117085-dd8f-4bf0-9d26-4a26ac83fd86|dataio|s3://this-bucket-dne/dataio/20117085-dd8f-4bf0-9d26-4a26ac83fd86.csv
+07d3094f-17a0-46a5-912e-5dabc3494d8e|codecademy|s3://this-bucket-dne/codecademy/07d3094f-17a0-46a5-912e-5dabc3494d8e.csv
+a5aaaf26-36b1-49b6-821e-df1ef8c97f15|abc_open_data|s3://this-bucket-dne/abc_open_data/a5aaaf26-36b1-49b6-821e-df1ef8c97f15.csv
+57aff45c-e4f6-46cd-ac6e-0c622d4b74b9|xyz_industries|s3://this-bucket-dne/xyz_industries/57aff45c-e4f6-46cd-ac6e-0c622d4b74b9.csv
+cfb980d3-28aa-4783-9e78-818c37894373|dataio|s3://this-bucket-dne/dataio/cfb980d3-28aa-4783-9e78-818c37894373.csv
+ca9be324-58fa-4b41-9a5f-9580482d675a|abc_open_data|s3://this-bucket-dne/abc_open_data/ca9be324-58fa-4b41-9a5f-9580482d675a.csv
+b00894ad-0de7-4d8c-8c72-de7544e41952|xyz_industries|s3://this-bucket-dne/xyz_industries/b00894ad-0de7-4d8c-8c72-de7544e41952.csv
+8d454175-437e-4283-8f6c-438df4ada7c4|abc_open_data|s3://this-bucket-dne/abc_open_data/8d454175-437e-4283-8f6c-438df4ada7c4.csv
+476e3333-21a5-4b2f-8d51-6f6743647967|dataio|s3://this-bucket-dne/dataio/476e3333-21a5-4b2f-8d51-6f6743647967.csv
+b3bb619a-f76a-411e-8238-99c93c746ccb|xyz_industries|s3://this-bucket-dne/xyz_industries/b3bb619a-f76a-411e-8238-99c93c746ccb.csv
+54574bc2-8815-4015-b55f-a159bb48ea6b|dataio|s3://this-bucket-dne/dataio/54574bc2-8815-4015-b55f-a159bb48ea6b.csv
+(100 rows)
+SET
+CREATE POLICY
+ALTER TABLE
+dataset_id|owner|download_timestamp
+54574bc2-8815-4015-b55f-a159bb48ea6b|dataio|2020-02-24 08:39:00
+1e93a40e-9b25-4fe7-a47d-caea273c119d|abc_open_data|2020-02-12 01:59:00
+2566b4bb-0298-4a39-ba0b-d90e279e953b|codecademy|2020-02-28 19:07:00
+(3 rows)
+SET
+dataset_id|owner|download_timestamp
+(0 rows)
