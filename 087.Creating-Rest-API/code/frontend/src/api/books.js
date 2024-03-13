@@ -1,4 +1,4 @@
-import { API_ENDPOINT } from ".";
+import { API_ENDPOINT } from "./index.js";
 
 export const getBooks = async () => {
   const response = await fetch(`${API_ENDPOINT}/books`);
