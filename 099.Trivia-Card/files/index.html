@@ -1,0 +1,49 @@
+<head>
+    <title>Trivia Card- Codecademy jQuery Project</title>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
+</head>
+  
+<body class="bg-custom">
+    <header>
+      <nav class="py-4">
+        <h1 class="text-uppercase text-center mt-2">Trivia Card</h1>
+      </nav>
+    </header>
+    
+    <div id="main-card" class="mx-auto mt-4 mb-1">
+      <h2 class="text-capitalize mb-3">What is the capital of New York?</h2>
+      <div class="header mt-4 py-3">
+        <h3 class="text-uppercase text-center font-weight-bold" id="hint">SHOW/HIDE HINT</h3>
+        <h4 class="text-capitalize" id="data">The capital is not the largest city!</h4>
+      </div>
+      <div id="answers">
+        <h3 class="whit" id="one">New York City</h3>
+        <h3 class="blu" id="two">Buffalo</h3>
+        <h3 class="whit" id="three">Syracuse</h3>
+        <h3 class="blu" id="four">Albany</h3>
+      </div>
+      <div id="foot" class="text-white"> 
+        <svg style="width:70px;height:70px"  viewBox="0 0 496 512" width="100" title="angry" id="icon-1" >
+            <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM136 240c0-9.3 4.1-17.5 10.5-23.4l-31-9.3c-8.5-2.5-13.3-11.5-10.7-19.9 2.5-8.5 11.4-13.2 19.9-10.7l80 24c8.5 2.5 13.3 11.5 10.7 19.9-2.1 6.9-8.4 11.4-15.3 11.4-.5 0-1.1-.2-1.7-.2.7 2.7 1.7 5.3 1.7 8.2 0 17.7-14.3 32-32 32S136 257.7 136 240zm168 154.2c-27.8-33.4-84.2-33.4-112.1 0-13.5 16.3-38.2-4.2-24.6-20.5 20-24 49.4-37.8 80.6-37.8s60.6 13.8 80.6 37.8c13.8 16.5-11.1 36.6-24.5 20.5zm76.6-186.9l-31 9.3c6.3 5.8 10.5 14.1 10.5 23.4 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-2.9.9-5.6 1.7-8.2-.6.1-1.1.2-1.7.2-6.9 0-13.2-4.5-15.3-11.4-2.5-8.5 2.3-17.4 10.7-19.9l80-24c8.4-2.5 17.4 2.3 19.9 10.7 2.5 8.5-2.3 17.4-10.8 19.9z" />
+        </svg>
+        <svg viewBox="0 0 496 512" width="100" title="grin-alt" style="width:70px;height:70px" id="icon-2">
+            <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm63.7 128.7c7.6-11.4 24.7-11.7 32.7 0 12.4 18.4 15.1 36.9 15.7 55.3-.5 18.4-3.3 36.9-15.7 55.3-7.6 11.4-24.7 11.7-32.7 0-12.4-18.4-15.1-36.9-15.7-55.3.5-18.4 3.3-36.9 15.7-55.3zm-160 0c7.6-11.4 24.7-11.7 32.7 0 12.4 18.4 15.1 36.9 15.7 55.3-.5 18.4-3.3 36.9-15.7 55.3-7.6 11.4-24.7 11.7-32.7 0-12.4-18.4-15.1-36.9-15.7-55.3.5-18.4 3.3-36.9 15.7-55.3zM248 432c-60.6 0-134.5-38.3-143.8-93.3-2-11.8 9.3-21.6 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.4-3.7 22.6 6.1 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3z" />
+        </svg>
+       
+        </div>
+    </div>
+    
+    <div id="butt" class="text-center">  
+          <button id="submit" type="submit">Reset</button>
+    </div>
+  
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src='js/main.js'></script>   
+</body>
+  
+  
+</html>

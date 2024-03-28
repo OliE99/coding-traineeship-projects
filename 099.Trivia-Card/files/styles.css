@@ -1,0 +1,119 @@
+body.bg-custom {
+    background-color: #86bdfd;
+}
+nav {
+    margin: 0px 0px;
+    padding: 5px 2px;
+    background: rgba(11, 39, 72, 0.8);
+}
+nav h1 {
+    color: #fff;
+    letter-spacing: 0.3em;
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+}
+* {
+    box-sizing: border-box;
+}
+#main-card {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: auto;
+    margin: auto;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+#main-card h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 50px 5px 0px 0px;
+}
+#main-card .header {
+    background: #0b2748;
+    width: 60%;
+    cursor: pointer;
+}
+#main-card .header h3 {
+    color: #4a90e2;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Roboto", sans-serif;
+}
+#main-card .header h4 {
+    display: none;
+    text-align: center;
+    color: #4a90e2;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#main-card #answers {
+    width: 60%;
+    background: #edf5ff;
+}
+#main-card #answers h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 15px 0px;
+    margin: 0;
+    cursor: pointer;
+}
+#main-card #answers .whit {
+    background-color: #fff;
+}
+#main-card #answers .blu {
+    background-color: #edf5ff;
+}
+#main-card #foot {
+    width: 60%;
+    text-align: center;
+    height: auto;
+    background: #0b2748;
+}
+#main-card #foot svg#icon-1, #main-card #foot svg#icon-2 {
+    display: none;
+    margin: 10px 0;
+    fill: #fff;
+}
+#butt {
+    overflow: auto;
+    margin: auto;
+    margin-bottom: 0px;
+}
+#butt #submit {
+    word-wrap: break-word;
+    background-color: #0b2748;
+    border-radius: 4px;
+    margin: 15px 0;
+    padding: 5px 20px;
+    border: 1px #0b2748 solid;
+    font-family: "Helvetica", "sans-serif";
+    color: #4a90e2;
+    font-size: 16px;
+    font-weight: 700;
+}
+#butt #submit:hover {
+    color: #fff;
+    background-color: #4a90e2;
+    border: 1px #4a90e2 solid;
+}
+@media (max-width: 600px) {
+    #main-card .header {
+        width: 85%;
+   }
+    #main-card #answers {
+        width: 85%;
+   }
+    #main-card #foot {
+        width: 85%;
+   }
+}
